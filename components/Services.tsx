@@ -52,7 +52,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-200"
+              className="bg-white shadow-lg rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-200 "
               variants={{
                 hidden: { opacity: 0, scale: 0.9 },
                 visible: {
