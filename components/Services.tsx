@@ -38,42 +38,46 @@ const services = [
 const Services = () => {
   return (
     <section className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center text-gray-800 mb-12">Services I Offer</h2>
-
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2, duration: 0.4, ease: "easeIn" }
-          }}
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-200 "
-              variants={{
-                hidden: { opacity: 0, scale: 0.9 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { 
-                    type: 'spring', 
-                    stiffness: 100, 
-                    delay: index * 0.2 // Adding delay based on the index
-                  },
-                },
-              }}
-            >
-              <div className="text-4xl mb-4 text-blue-500">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <div className="mx-auto px-6">
+      <motion.h2
+        className="text-4xl font-semibold text-center mb-12"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.3, duration: 0.8, ease: "easeIn" }
+        }}
+      >
+        Services I Offer
+      </motion.h2>
+  
+      {/* Service cards with motion effect */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.3, duration: 0.8, ease: "easeIn" }
+        }}
+      >
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="bg-white shadow-lg rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-200"
+            initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition:{delay:2.3, duration:0.8, ease:"easeIn"}
+         }}
+          >
+            <div className="text-4xl mb-4 text-blue-500">{service.icon}</div>
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h3>
+            <p className="text-gray-600">{service.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  </section>
+  
   );
 };
 

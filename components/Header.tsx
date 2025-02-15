@@ -11,7 +11,7 @@ type Props = {}
 
 const Header = (props: Props) => {
   return (
-      <header className="py-5 xl:py-12 ">
+      <header className="py-5 xl:py-10">
           <div className="mx-auto max-w-7xl flex justify-between items-center">
               <Link href="/">
                   <h1 className="text-2xl font-semi-bold flex items-center">Allen<span><FaStarOfLife size={15} className="text-blue-500"/></span></h1>
