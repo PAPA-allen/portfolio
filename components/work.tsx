@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-import WorkSliderBtn from './WorkSliderBtn';
 
 // Define project structure interface
 interface Project {
@@ -44,12 +43,6 @@ const projects: Project[] = [
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [project, setProject] = useState<Project>(projects[0]);
-
-  // Function to handle slide change
-  const handleSlideChange = (index: number) => {
-    setCurrentIndex(index);
-    setProject(projects[index]);
-  };
 
   // Function for next slide
   const nextSlide = () => {

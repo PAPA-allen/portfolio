@@ -6,10 +6,7 @@ import { FaStarOfLife } from "react-icons/fa";
 import MobileNav from './MobileNav';
 
 
-
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
       <header className="py-5 xl:py-10">
           <div className="mx-auto max-w-7xl flex justify-between items-center">
