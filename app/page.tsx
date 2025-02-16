@@ -7,6 +7,16 @@ import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion"; 
 
 export default function Home() {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf"; // Use the correct relative path to your file in the public folder
+    link.download = "Allen_Aryee_CV.pdf"; // The name the file will have once downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+
   return (
     <motion.section
       className="h-full mt-auto"
@@ -27,7 +37,7 @@ export default function Home() {
               A full-stack developer passionate about creating mobile and web applications with expertise in modern technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="secondary">
+              <Button variant="secondary" onClick={handleDownloadCV}>
                 <span>
                   Download CV
                 </span>

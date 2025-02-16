@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import { Toaster } from "@/components/ui/sonner";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrainsMono",
@@ -31,7 +32,7 @@ export default function RootLayout({
         <PageTransition>
         {children}
         </PageTransition>
-       
+        <Toaster />
       </body>
     </html>
   );
