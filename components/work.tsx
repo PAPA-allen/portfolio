@@ -78,7 +78,7 @@ const projects: Project[] = [
     {
         num: "06",
         category: "Frontend",
-        description: "The Admin Dashboard for StudyHub provides a powerful interface to manage and customize every aspect of the platform. From the layout to the footer, the admin can easily modify content, update user data, and oversee platform performance. Designed with a focus on usability and clean design, the dashboard is built using **React.js**, **Redux Toolkit**, and styled with **TailwindCSS**. It integrates a smooth user experience with interactive features such as drag-and-drop components, charts, and real-time updates, allowing admins to manage the platform efficiently.",
+        description: "The Admin Dashboard for StudyHub provides a powerful interface to manage and customize every aspect of the platform. From the layout to the footer, the admin can easily modify content, update user data, and oversee platform performance. Designed with a focus on usability and clean design. It integrates a smooth user experience with interactive features such as drag-and-drop components, charts, and real-time updates, allowing admins to manage the platform efficiently.",
         stack: [
           { name: "Next.js" },
           { name: "Redux Toolkit" },
@@ -93,7 +93,7 @@ const projects: Project[] = [
     {
         num: "07",
         category: "FullStack",
-        description: "The Bus Transit Dashboard is a comprehensive management system for overseeing bus routes, scheduling, and user activity in a company’s transit system. Built with **PHP** for the backend, the dashboard allows administrators to manage bus routes, track users, and view analytics in real-time. The frontend is developed using **React.js** and styled with **TailwindCSS** to ensure a clean and responsive interface. Real-time updates and notifications are handled with **Socket.IO**, while detailed transit data and reports are visualized using **Chart.js**.",
+        description: "The Bus Transit Dashboard is a comprehensive management system for overseeing bus routes, scheduling, and user activity in a company’s transit system to ensure a clean and responsive interface. Real-time updates and notifications are handled with **Socket.IO**, while detailed transit data and reports are visualized using **Chart.js**.",
         stack: [
           { name: "PHP" },             // PHP for backend logic and API handling
           { name: "React.js" },        // React.js for the frontend dashboard interface
@@ -111,7 +111,7 @@ const projects: Project[] = [
     {
         num: "08",
         category: "FullStack",
-        description: "This application is designed for students to solve past questions and track their academic progress. The app allows users to access a vast database of past exam questions, submit answers, and review solutions. It provides an interactive interface that helps students improve their study habits. Features include question categorization, progress tracking, and performance analysis. Built with JavaScript for the frontend and python for the backend, the app offers a seamless user experience for students to manage their study sessions effectively.",
+        description: "This application is designed for students to solve past questions and track their academic progress. The app allows users to access a vast database of past exam questions, submit answers, and review solutions. It provides an interactive interface that helps students improve their study habits. Features include question categorization, progress tracking, and performance analysis",
         stack: [
           { name: "Javascript" }, 
           { name: "Python" }, 
