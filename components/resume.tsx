@@ -121,21 +121,32 @@ const Resume = () => {
               {about.description}
             </motion.p>
             <div className="grid md:grid-cols-2 gap-8">
-              {about.info.map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="p-4"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: 1,
-                    transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
-                  }}
-                >
-                  <h3 className="font-medium text-gray-600">{item.fieldName}</h3>
-                  <p className="text-gray-800 mt-2">{item.fieldValue}</p>
-                </motion.div>
-              ))}
-            </div>
+  {about.info.map((item, index) => (
+    <motion.div
+      key={index}
+      className="p-4"
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
+      }}
+    >
+      <h3 className="font-medium text-gray-600">{item.fieldName}</h3>
+      <p className="text-gray-800 mt-2 flex items-center">
+        {item.fieldName === "Freelance" && item.fieldValue === "Available" ? (
+          <>
+            <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-blink mr-2"></span>
+            {item.fieldValue}
+          </>
+        ) : (
+          item.fieldValue
+        )}
+      </p>
+    </motion.div>
+  ))}
+</div>
+
+
           </>
         )}
 

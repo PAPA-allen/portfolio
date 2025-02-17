@@ -92,3 +92,20 @@
     @apply text-[18px] xl:text-[23px] leading-[1.1] font-semibold;
   }
 }
+
+/* Add this CSS for blinking effect */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s ease-in-out infinite;
+}
