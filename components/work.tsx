@@ -62,7 +62,7 @@ const projects: Project[] = [
     {
         num: "05",
         category: "FullStack",
-        description: "StudyHub is an interactive study platform designed for students to access educational videos and learning resources. The platform allows students to watch videos, track their progress, and interact with instructors in real time. Built with **Next.js** for server-side rendering, **Redux Toolkit** for efficient state management, and styled with **TailwindCSS**, StudyHub offers a fast, responsive, and engaging experience. The backend is powered by **Express.js** and integrates real-time communication via **Socket.IO**. Redis is used for caching, while **Paystack** handles payments and **Cloudinary** is used for media storage and management.",
+        description: "StudyHub is an interactive study platform designed for students to access educational videos and learning resources. The platform allows students to watch videos, track their progress, and interact with instructors in real time. StudyHub offers a fast, responsive, and engaging experience. The backend is powered by **Express.js** and integrates real-time communication via **Socket.IO**.",
         stack: [
           { name: "Next.js" },
           { name: "Redux Toolkit" },
