@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman } from "react-icons/si";
 import { motion } from "framer-motion";
 
 // About section data
@@ -35,6 +35,7 @@ const education = [
 
 // Skills section data with added frontend and backend skills
 const skills = [
+  // Frontend Web Development
   { icon: <FaHtml5 size={48} color="#E34F26" />, label: "HTML5", type: "frontend" },
   { icon: <FaCss3 size={48} color="#1572B6" />, label: "CSS3", type: "frontend" },
   { icon: <FaJs size={48} color="#F7DF1E" />, label: "JavaScript", type: "frontend" },
@@ -43,8 +44,12 @@ const skills = [
   { icon: <SiNextdotjs size={48} color="#000000" />, label: "Next.js", type: "frontend" },
   { icon: <SiTypescript size={48} color="#3178C6" />, label: "TypeScript", type: "frontend" },
   { icon: <SiSass size={48} color="#C76494" />, label: "Sass", type: "frontend" },
+  { icon: <SiStyledcomponents size={48} color="#DB7093" />, label: "Styled Components", type: "frontend" },
 
-  // Backend Skills
+  // Frontend Testing (Web)
+  { icon: <SiJest size={48} color="#C21325" />, label: "Jest", type: "testing" },
+
+  // Backend Development
   { icon: <FaNodeJs size={48} color="#68A063" />, label: "Node.js", type: "backend" },
   { icon: <SiExpress size={48} color="#000000" />, label: "Express.js", type: "backend" },
   { icon: <SiMongodb size={48} color="#47A248" />, label: "MongoDB", type: "backend" },
@@ -53,8 +58,27 @@ const skills = [
   { icon: <SiDocker size={48} color="#2496ED" />, label: "Docker", type: "backend" },
   { icon: <SiGit size={48} color="#F1502F" />, label: "Git", type: "backend" },
   { icon: <SiPostgresql size={48} color="#336791" />, label: "PostgreSQL", type: "backend" },
+  { icon: <SiFirebase size={48} color="#FFCA28" />, label: "Firebase", type: "backend" },
+
+  // Frontend Mobile Development (React Native)
   { icon: <FaReact size={48} color="#61DAFB" />, label: "React Native", type: "frontend" },
+  { icon: <SiExpo size={48} color="#000000" />, label: "Expo", type: "frontend" },
+  { icon: <SiRedux size={48} color="#764ABC" />, label: "Redux", type: "frontend" },
+
+  // Version Control
+  { icon: <SiGit size={48} color="#F1502F" />, label: "Git", type: "tools" },
+  { icon: <SiGithub size={48} color="#181717" />, label: "GitHub", type: "tools" },
+  
+
+  // Cloud Platforms & Services
+  { icon: <SiVercel size={48} color="#000000" />, label: "Vercel", type: "tools" },
+
+  // Other Tools & Libraries
+  { icon: <SiFigma size={48} color="#F24E1E" />, label: "Figma", type: "tools" },
+  { icon: <SiPostman size={48} color="#FF6C37" />, label: "Postman", type: "tools" },
+
 ];
+
 
 const Resume = () => {
   const [activeTab, setActiveTab] = useState("about");
