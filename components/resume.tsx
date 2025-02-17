@@ -170,8 +170,6 @@ const Resume = () => {
     </motion.div>
   ))}
 </div>
-
-
           </>
         )}
 
