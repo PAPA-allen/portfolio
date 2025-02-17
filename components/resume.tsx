@@ -97,7 +97,7 @@ const Resume = () => {
       >
         <button
           className={`px-6 py-3 text-lg font-medium ${
-            activeTab === "about" ? "text-primary border-b-4 border-primary" : "text-gray-600"
+            activeTab === "about" ? "text-primary border-b-4 border-primary" : ""
           }`}
           onClick={() => setActiveTab("about")}
         >
@@ -105,7 +105,7 @@ const Resume = () => {
         </button>
         <button
           className={`px-6 py-3 text-lg font-medium ${
-            activeTab === "skills" ? "text-primary border-b-4 border-primary" : "text-gray-600"
+            activeTab === "skills" ? "text-primary border-b-4 border-primary" : ""
           }`}
           onClick={() => setActiveTab("skills")}
         >
@@ -113,7 +113,7 @@ const Resume = () => {
         </button>
         <button
           className={`px-6 py-3 text-lg font-medium ${
-            activeTab === "education" ? "text-primary border-b-4 border-primary" : "text-gray-600"
+            activeTab === "education" ? "text-primary border-b-4 border-primary" : ""
           }`}
           onClick={() => setActiveTab("education")}
         >
@@ -136,7 +136,7 @@ const Resume = () => {
               {about.title}
             </motion.h2>
             <motion.p
-              className="text-gray-700 mb-6"
+              className=" mb-6"
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
@@ -156,8 +156,8 @@ const Resume = () => {
         transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
       }}
     >
-      <h3 className="font-medium text-gray-600">{item.fieldName}</h3>
-      <p className="text-gray-800 mt-2 flex items-center">
+      <h3 className="font-medium ">{item.fieldName}</h3>
+      <p className=" mt-2 flex items-center">
         {item.fieldName === "Freelance" && item.fieldValue === "Available" ? (
           <>
             <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-blink mr-2"></span>
@@ -229,9 +229,9 @@ const Resume = () => {
                     transition: { delay: 2, duration: 0.4, ease: "easeIn" },
                   }}
                 >
-                  <h3 className="font-medium text-gray-600">{item.degree}</h3>
-                  <p className="text-gray-800 mt-2">{item.institution}</p>
-                  <p className="text-gray-600 mt-1">{item.duration}</p>
+                  <h3 className="font-medium ">{item.degree}</h3>
+                  <p className=" mt-2">{item.institution}</p>
+                  <p className=" mt-1">{item.duration}</p>
                 </motion.div>
               ))}
             </div>

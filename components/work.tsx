@@ -149,7 +149,7 @@ const Work = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col xl:flex-row xl:gap-12 gap-6">
           {/* Left Section: Project Details */}
-          <div className="w-full xl:w-[50%] text-black flex flex-col items-center xl:items-start">
+          <div className="w-full xl:w-[50%] flex flex-col items-center xl:items-start">
             <div className="flex flex-col gap-6">
               {/* Project Number */}
               <div className="text-5xl font-extrabold">{project.num}</div>

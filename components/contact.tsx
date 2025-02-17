@@ -13,7 +13,7 @@ import { Loader2Icon } from 'lucide-react';
 
 const info = [
     {
-        icon: <FaPhoneAlt />,
+        icon: <FaPhoneAlt/>,
         title: 'Phone',
         description: '(+000) 000 000 000',
     },
@@ -97,7 +97,7 @@ const Contact = () => {
                 {/* Contact Info Section */}
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                     {info.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center text-center bg-white p-6 shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                        <div key={index} className="flex flex-col items-center text-center  p-6 shadow-lg rounded-lg transition-transform transform hover:scale-105">
                             <div className="text-4xl text-primary mb-4">{item.icon}</div>
                             <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h3>
                             <p className="text-gray-600">{item.description}</p>
@@ -107,11 +107,11 @@ const Contact = () => {
 
                 {/* Contact Form Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-white p-8 shadow-lg rounded-lg">
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get In Touch</h2>
+                    <div className=" p-8 shadow-lg rounded-lg">
+                        <h2 className="text-2xl font-semibold dark:text-white mb-6">Get In Touch</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="mb-4">
-                                <label htmlFor="fullName" className="block text-gray-700">Full Name</label>
+                                <label htmlFor="fullName" className="block ">Full Name</label>
                                 <Input
                                     type="text"
                                     id="fullName"
@@ -123,7 +123,7 @@ const Contact = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label htmlFor="phoneNumber" className="block text-gray-700">Phone Number</label>
+                                <label htmlFor="phoneNumber" className="block">Phone Number</label>
                                 <Input
                                     type="tel"
                                     id="phoneNumber"
@@ -135,7 +135,7 @@ const Contact = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label htmlFor="email" className="block text-gray-700">Email Address</label>
+                                <label htmlFor="email" className="block ">Email Address</label>
                                 <Input
                                     type="email"
                                     id="email"
@@ -147,7 +147,7 @@ const Contact = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label htmlFor="message" className="block text-gray-700">Your Message</label>
+                                <label htmlFor="message" className="block ">Your Message</label>
                                 <Textarea
                                     id="message"
                                     name="message"
@@ -161,8 +161,8 @@ const Contact = () => {
                             <div className="flex justify-end">
                                 <Button
                                     type="submit"
-                                    className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-primary-dark"
-                                    disabled={loading || !isFormValid} // Button is disabled if loading or form is invalid
+                                    className=" px-6 py-2 rounded-lg shadow-md hover:bg-primary-dark"
+                                    disabled={loading || !isFormValid}
                                 >
                                     {loading ? <Loader2Icon className="animate-spin"/> : "Send Message"}
                                 </Button>
@@ -170,8 +170,8 @@ const Contact = () => {
                         </form>
                     </div>
 
-                    <div className="bg-white p-8 shadow-lg rounded-lg">
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Select Service</h2>
+                    <div className=" p-8 shadow-lg rounded-lg">
+                        <h2 className="text-2xl font-semibold  mb-6">Select Service</h2>
                         <Select
                             value={form.selectService}
                             onValueChange={(value) => setForm({ ...form, selectService: value })}

@@ -4,6 +4,7 @@ import Nav from './Nav';
 import { Button } from './ui/button';
 import { FaStarOfLife } from "react-icons/fa";
 import MobileNav from './MobileNav';
+import { ModeToggle } from './modeToggle';
 
 
 const Header = () => {
@@ -14,12 +15,17 @@ const Header = () => {
                   <h1 className="text-2xl font-semi-bold flex items-center">Allen<span><FaStarOfLife size={15} className="text-blue-500"/></span></h1>
               </Link>
               {/* desktop nav */}
+             
               <div className="hidden xl:flex items-center gap-5">
+              <ModeToggle/>
                   <Nav />
+                 
                   <Link href="/contact">
-                  <Button variant="outline">Hire me</Button></Link>
+                      <Button variant="outline">Hire me</Button></Link>
+                    
               </div>
-            
+             
+              
               {/* mobile app */}
               <div className="xl:hidden">
                   <MobileNav/>

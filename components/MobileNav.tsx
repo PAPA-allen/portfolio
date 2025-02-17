@@ -6,6 +6,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { usePathname } from "next/navigation";
 import Link from 'next/link';
 import { FaStarOfLife } from "react-icons/fa";
+import { ModeToggle } from './modeToggle';
 
 const links = [
     {
@@ -42,9 +43,14 @@ const MobileNav = () => {
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
             {/* SheetTrigger to open the menu */}
+            <div className="flex gap-4">
+            <ModeToggle/>
             <SheetTrigger className="flex justify-center items-center">
                 <CiMenuFries className="text-[32px] text-blue-400" />
             </SheetTrigger>
+            </div>
+          
+         
 
             {/* SheetContent for the navigation menu */}
             <SheetContent className="flex flex-col px-3">
