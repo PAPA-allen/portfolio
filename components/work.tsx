@@ -111,9 +111,10 @@ const projects: Project[] = [
     {
         num: "08",
         category: "FullStack",
-        description: "The Blood Bank Management System is designed to help manage and track blood donations and inventory, specifically for students. The system allows admins to monitor blood stock, manage donor data, and track donation history. Built with **JavaScript** for the frontend and **Node.js** for the backend, the application provides a user-friendly interface for both donors and administrators. It integrates real-time notifications for low blood supply and features such as donor registration, blood group matching, and donation scheduling.",
+        description: "This application is designed for students to solve past questions and track their academic progress. The app allows users to access a vast database of past exam questions, submit answers, and review solutions. It provides an interactive interface that helps students improve their study habits. Features include question categorization, progress tracking, and performance analysis. Built with JavaScript for the frontend and python for the backend, the app offers a seamless user experience for students to manage their study sessions effectively.",
         stack: [
-
+          { name: "Javascript" }, 
+          { name: "Python" }, 
         ],
         image: "/project8.png",
         live: "",
@@ -200,7 +201,7 @@ const Work = () => {
             </div>
           </div>
           <div className="w-full relative">
-            <div className="relative group h-[300px] sm:h-[400px] overflow-hidden ">
+            <div className="relative group h-[300px] sm:h-[400px] overflow-hidden">
               <Image
                 src={project.image}
                 alt={`Project ${project.num}`}
