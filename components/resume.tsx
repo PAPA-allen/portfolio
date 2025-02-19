@@ -93,7 +93,7 @@ const Resume = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
+          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
       >
         <button
@@ -131,7 +131,7 @@ const Resume = () => {
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
-                transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
+                transition: { delay: 2, duration: 0.4, ease: "easeIn" },
               }}
             >
               {about.title}
@@ -154,7 +154,7 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" },
       }}
     >
       <h3 className="font-medium ">{item.fieldName}</h3>
@@ -181,7 +181,7 @@ const Resume = () => {
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
-                transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
+                transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
               }}
             >
               Skills
@@ -194,7 +194,7 @@ const Resume = () => {
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity: 1,
-                    transition: { delay: 2.5, duration: 0.4, ease: "easeIn" },
+                    transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
                   }}
                 >
                   <div className="flex flex-col items-center justify-center gap-3">
@@ -214,7 +214,7 @@ const Resume = () => {
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
-                transition: { delay: 2.3, duration: 0.4, ease: "easeIn" },
+                transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
               }}
             >
               Education
@@ -227,7 +227,7 @@ const Resume = () => {
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity: 1,
-                    transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+                    transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
                   }}
                 >
                   <h3 className="font-medium ">{item.degree}</h3>

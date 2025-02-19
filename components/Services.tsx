@@ -47,7 +47,7 @@ const Services = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 0.5, duration: 0.8, ease: "easeInOut" }
+            transition: { delay: 2, duration: 0.8, ease: "easeInOut" }
           }}
         >
           Services I Offer
@@ -58,7 +58,7 @@ const Services = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 1, duration: 0.8, ease: "easeInOut" }
+            transition: { delay: 2, duration: 0.8, ease: "easeInOut" }
           }}
         >
           {services.map((service, index) => (
