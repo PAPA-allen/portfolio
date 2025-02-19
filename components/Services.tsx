@@ -1,6 +1,9 @@
 "use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
+import { CardContainer, CardBody, CardItem } from "./3d-card"; // Import your 3D card components
+import Link from 'next/link';
 
 const services = [
   {
@@ -37,47 +40,64 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20">
-    <div className="mx-auto px-6">
-      <motion.h2
-        className="text-4xl font-semibold text-center mb-12"
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2.3, duration: 0.8, ease: "easeIn" }
-        }}
-      >
-        Services I Offer
-      </motion.h2>
-  
-      {/* Service cards with motion effect */}
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2.3, duration: 0.8, ease: "easeIn" }
-        }}
-      >
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-200"
-            initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition:{delay:2.3, duration:0.8, ease:"easeIn"}
-         }}
-          >
-            <div className="text-4xl mb-4 text-blue-500">{service.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h3>
-            <p className="text-gray-600">{service.description}</p>
-          </motion.div>
-        ))}
-      </motion.div>
-    </div>
-  </section>
-  
+    <section className="py-10">
+      <div className="mx-auto px-6 max-w-screen-xl">
+        <motion.h2
+          className="text-4xl font-semibold text-center mb-8"
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 0.5, duration: 0.8, ease: "easeInOut" }
+          }}
+        >
+          Services I Offer
+        </motion.h2>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 1, duration: 0.8, ease: "easeInOut" }
+          }}
+        >
+          {services.map((service, index) => (
+            <CardContainer key={index} className="group/card">
+              <div
+                className="shadow-lg rounded-xl p-8 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-blue-300 border border-gray-200"
+                style={{
+                  perspective: "1000px",
+                  transformStyle: "preserve-3d",
+                  height: "400px",
+                  width: "320px",
+                }}
+              >
+                <CardItem
+                  translateZ="50"
+                  className="flex justify-center items-center text-5xl mb-6" 
+                >
+                  {service.icon}
+                </CardItem>
+
+                <CardItem
+                  translateZ="60"
+                  className="text-center font-bold text-4xl mb-6 flex justify-center"
+                >
+                  {service.title}
+                </CardItem>
+
+                <CardItem
+                  translateZ="100"
+                  className="w-full mt-4 text-sm text-gray-500"
+                >
+                  <p>{service.description}</p>
+                </CardItem>
+              </div>
+            </CardContainer>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
