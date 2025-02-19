@@ -36,10 +36,10 @@ const Stats = () => {
                 end={stat.num} 
                 duration={5} 
                 delay={2}
-                suffix={stat.num === yearsOfExperience ? "+" : ""}  // Add the + here if it's the yearsOfExperience stat
+                suffix={stat.num === yearsOfExperience ? "+" : ""}  
                 className="text-4xl font-semibold text-blue-500"
               />
-              <p className="text-lg font-medium mt-2 text-gray-700">
+              <p className="text-lg font-medium mt-2">
                 {stat.text}
               </p>
             </div>
