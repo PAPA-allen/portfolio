@@ -36,7 +36,7 @@ const Stats = () => {
                 end={stat.num} 
                 duration={5} 
                 delay={2}
-                suffix={stat.num === yearsOfExperience ? "+" : ""}  
+                suffix={stat.num === yearsOfExperience || stat.num === 8 ? "+" : ""} 
                 className="text-4xl font-semibold text-blue-500"
               />
               <p className="text-lg font-medium mt-2">
