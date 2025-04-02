@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp } from "react-icons/si";
 import { motion } from "framer-motion";
 
 // About section data
@@ -56,12 +56,12 @@ const skills = [
   { icon: <SiGraphql size={48} color="#E10098" />, label: "GraphQL", type: "backend" },
   { icon: <SiReactrouter size={48} color="#CA4245" />, label: "React Router", type: "backend" },
   { icon: <SiDocker size={48} color="#2496ED" />, label: "Docker", type: "backend" },
-  { icon: <SiGit size={48} color="#F1502F" />, label: "Git", type: "backend" },
   { icon: <SiPostgresql size={48} color="#336791" />, label: "PostgreSQL", type: "backend" },
   { icon: <SiFirebase size={48} color="#FFCA28" />, label: "Firebase", type: "backend" },
   { icon: <SiRedis size={48} color="#D92D2E" />, label: "Redis", type: "backend" },
   { icon: <SiWordpress size={48} color="#21759B" />, label: "WordPress", type: "backend" },
-
+  { icon: <SiPhp size={48} color="#777BB3" />, label: "PHP", type: "backend" },
+  
   // Frontend Mobile Development (React Native)
   { icon: <FaReact size={48} color="#61DAFB" />, label: "React Native", type: "frontend" },
   { icon: <SiExpo size={48} color="#000000" />, label: "Expo", type: "frontend" },
