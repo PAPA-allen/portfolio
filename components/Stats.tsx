@@ -4,7 +4,7 @@ import React from 'react';
 import CountUp from "react-countup";
 
 const currentYear = new Date().getFullYear();
-const startYear = 2021;
+const startYear = 2020;
 const yearsOfExperience = currentYear - startYear;
 
 // Stats data
@@ -31,12 +31,12 @@ const Stats = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center transition-shadow duration-300 ease-in-out">
-              <CountUp 
-                start={0} 
-                end={stat.num} 
-                duration={5} 
+              <CountUp
+                start={0}
+                end={stat.num}
+                duration={5}
                 delay={2}
-                suffix={stat.num === yearsOfExperience || stat.num === 8 ? "+" : ""} 
+                suffix={stat.num === yearsOfExperience || stat.num === 8 ? "+" : ""}
                 className="text-4xl font-semibold text-blue-500"
               />
               <p className="text-lg font-medium mt-2">
