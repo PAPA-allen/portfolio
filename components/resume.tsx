@@ -8,11 +8,11 @@ import { motion } from "framer-motion";
 const about = {
   title: "About Me",
   description:
-    "I'm a passionate full-stack developer with 4+ years of experience building innovative and scalable web applications. I am proficient in both frontend and backend technologies and am always eager to learn more.",
+    "I'm a passionate full-stack developer with 5+ years of experience building innovative and scalable web applications. I am proficient in both frontend and backend technologies and am always eager to learn more.",
   info: [
     { fieldName: "Name", fieldValue: "Allen Aryee" },
     { fieldName: "Phone", fieldValue: "(+233) 247 549 825" },
-    { fieldName: "Experience", fieldValue: "4+ years" },
+    { fieldName: "Experience", fieldValue: "5+ years" },
     { fieldName: "Nationality", fieldValue: "Ghanaian" },
     { fieldName: "Email", fieldValue: "allenniia@gmail.com" },
     { fieldName: "Freelance", fieldValue: "Available" },
@@ -61,7 +61,7 @@ const skills = [
   { icon: <SiRedis size={48} color="#D92D2E" />, label: "Redis", type: "backend" },
   { icon: <SiWordpress size={48} color="#21759B" />, label: "WordPress", type: "backend" },
   { icon: <SiPhp size={48} color="#777BB3" />, label: "PHP", type: "backend" },
-  
+
   // Frontend Mobile Development (React Native)
   { icon: <FaReact size={48} color="#61DAFB" />, label: "React Native", type: "frontend" },
   { icon: <SiExpo size={48} color="#000000" />, label: "Expo", type: "frontend" },
@@ -70,7 +70,7 @@ const skills = [
   // Version Control
   { icon: <SiGit size={48} color="#F1502F" />, label: "Git", type: "tools" },
   { icon: <SiGithub size={48} color="#181717" />, label: "GitHub", type: "tools" },
-  
+
 
   // Cloud Platforms & Services
   { icon: <SiVercel size={48} color="#000000" />, label: "Vercel", type: "tools" },
@@ -97,25 +97,22 @@ const Resume = () => {
         }}
       >
         <button
-          className={`px-6 py-3 text-lg font-medium ${
-            activeTab === "about" ? "text-primary border-b-4 border-primary" : ""
-          }`}
+          className={`px-6 py-3 text-lg font-medium ${activeTab === "about" ? "text-primary border-b-4 border-primary" : ""
+            }`}
           onClick={() => setActiveTab("about")}
         >
           About Me
         </button>
         <button
-          className={`px-6 py-3 text-lg font-medium ${
-            activeTab === "skills" ? "text-primary border-b-4 border-primary" : ""
-          }`}
+          className={`px-6 py-3 text-lg font-medium ${activeTab === "skills" ? "text-primary border-b-4 border-primary" : ""
+            }`}
           onClick={() => setActiveTab("skills")}
         >
           Skills
         </button>
         <button
-          className={`px-6 py-3 text-lg font-medium ${
-            activeTab === "education" ? "text-primary border-b-4 border-primary" : ""
-          }`}
+          className={`px-6 py-3 text-lg font-medium ${activeTab === "education" ? "text-primary border-b-4 border-primary" : ""
+            }`}
           onClick={() => setActiveTab("education")}
         >
           Education
@@ -147,30 +144,30 @@ const Resume = () => {
               {about.description}
             </motion.p>
             <div className="grid md:grid-cols-2 gap-8">
-  {about.info.map((item, index) => (
-    <motion.div
-      key={index}
-      className="p-4"
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-      }}
-    >
-      <h3 className="font-medium ">{item.fieldName}</h3>
-      <p className=" mt-2 flex items-center">
-        {item.fieldName === "Freelance" && item.fieldValue === "Available" ? (
-          <>
-            <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-blink mr-2"></span>
-            {item.fieldValue}
-          </>
-        ) : (
-          item.fieldValue
-        )}
-      </p>
-    </motion.div>
-  ))}
-</div>
+              {about.info.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="p-4"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+                  }}
+                >
+                  <h3 className="font-medium ">{item.fieldName}</h3>
+                  <p className=" mt-2 flex items-center">
+                    {item.fieldName === "Freelance" && item.fieldValue === "Available" ? (
+                      <>
+                        <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-blink mr-2"></span>
+                        {item.fieldValue}
+                      </>
+                    ) : (
+                      item.fieldValue
+                    )}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </>
         )}
 
