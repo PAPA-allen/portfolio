@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp, SiNx } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp, SiNx, SiReactquery } from "react-icons/si";
 import { motion } from "framer-motion";
 
 // About section data
@@ -45,6 +45,7 @@ const skills = [
   { icon: <SiTypescript size={48} color="#3178C6" />, label: "TypeScript", type: "frontend" },
   { icon: <SiSass size={48} color="#C76494" />, label: "Sass", type: "frontend" },
   { icon: <SiStyledcomponents size={48} color="#DB7093" />, label: "Styled Components", type: "frontend" },
+  { icon: <SiReactquery size={48} color="#FF4154" />, label: "TanStack Query", type: "frontend" },
 
   // Frontend Testing (Web)
   { icon: <SiJest size={48} color="#C21325" />, label: "Jest", type: "testing" },
