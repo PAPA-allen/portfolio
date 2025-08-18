@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp, SiNx } from "react-icons/si";
 import { motion } from "framer-motion";
 
 // About section data
@@ -78,6 +78,7 @@ const skills = [
   // Other Tools & Libraries
   { icon: <SiFigma size={48} color="#F24E1E" />, label: "Figma", type: "tools" },
   { icon: <SiPostman size={48} color="#FF6C37" />, label: "Postman", type: "tools" },
+  { icon: <SiNx size={48} color="#143055" />, label: "Nx", type: "tools" },
 
 ];
 
