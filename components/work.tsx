@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/t
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 // Define project structure interface
 interface Project {
@@ -145,6 +145,9 @@ const projects: Project[] = [
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [project, setProject] = useState<Project>(projects[0]);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Function for next slide
   const nextSlide = () => {
@@ -158,17 +161,68 @@ const Work = () => {
     setProject(projects[(currentIndex - 1 + projects.length) % projects.length]);
   };
 
+  // Touch event handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
+
+    // Reset values
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
   return (
     <motion.section
+      ref={containerRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.6, ease: "easeInOut" } }}
-      className="min-h-screen py-12 flex flex-col justify-center flex-wrap"
+      className="min-h-screen py-12 flex flex-col justify-center flex-wrap relative"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col xl:flex-row xl:gap-12 gap-6">
+      {/* Large Screen Navigation - Fixed at screen edges */}
+      <div className="hidden xl:flex fixed top-1/2 transform -translate-y-1/2 left-8 z-10">
+        <button
+          className="bg-gray-800 hover:bg-gray-700 text-white w-16 h-16 flex justify-center items-center rounded-full transition-all shadow-lg hover:shadow-xl"
+          onClick={prevSlide}
+        >
+          <span className="text-2xl">&lt;</span>
+        </button>
+      </div>
+
+      <div className="hidden xl:flex fixed top-1/2 transform -translate-y-1/2 right-8 z-10">
+        <button
+          className="bg-gray-800 hover:bg-gray-700 text-white w-16 h-16 flex justify-center items-center rounded-full transition-all shadow-lg hover:shadow-xl"
+          onClick={nextSlide}
+        >
+          <span className="text-2xl">&gt;</span>
+        </button>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="flex flex-col xl:flex-row xl:gap-16 gap-6">
           {/* Left Section: Project Details */}
-          <div className="w-full xl:w-[50%] flex flex-col items-center xl:items-start">
-            <div className="flex flex-col gap-6">
+          <div className="w-full xl:w-[45%] flex flex-col items-center xl:items-center text-center xl:text-left">
+            <div className="flex flex-col gap-6 xl:max-w-lg">
               {/* Project Number */}
               <div className="text-5xl font-extrabold">{project.num}</div>
 
@@ -176,10 +230,10 @@ const Work = () => {
               <h2 className="text-3xl font-semibold capitalize">{project.category}</h2>
 
               {/* Project Description */}
-              <p className="text-lg">{project.description}</p>
+              <p className="text-lg leading-relaxed">{project.description}</p>
 
               {/* Tech Stack */}
-              <ul className="flex gap-4 flex-wrap justify-center xl:justify-start">
+              <ul className="flex gap-4 flex-wrap justify-center xl:justify-center">
                 {project.stack.map((item, index) => (
                   <li key={index} className="text-xl text-blue-500">
                     {item.name}
@@ -189,7 +243,7 @@ const Work = () => {
               </ul>
 
               {/* Action Buttons */}
-              <div className="flex gap-6 mt-6 justify-center xl:justify-start">
+              <div className="flex gap-6 mt-6 justify-center xl:justify-center">
                 <Link href={project.live || ""}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -218,8 +272,10 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full relative">
-            <div className="relative group h-[300px] sm:h-[400px] overflow-hidden">
+
+          {/* Right Section: Project Image */}
+          <div className="w-full xl:w-[45%] relative xl:flex xl:justify-center">
+            <div className="relative group h-[300px] sm:h-[400px] w-full xl:max-w-md overflow-hidden">
               <Image
                 src={project.image}
                 alt={`Project ${project.num}`}
@@ -228,14 +284,17 @@ const Work = () => {
               />
             </div>
 
-            {/* Slider Navigation Buttons */}
-            <div className="flex justify-end mt-6 space-x-4">
+            {/* Mobile/Small Screen Navigation - Centered below image */}
+            <div className="xl:hidden flex justify-between items-center mt-6">
+              {/* Previous Button - Left Side */}
               <button
                 className="bg-gray-800 hover:bg-gray-700 text-white w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex justify-center items-center rounded-full transition-all"
                 onClick={prevSlide}
               >
                 <span className="text-xl sm:text-2xl">&lt;</span>
               </button>
+
+              {/* Next Button - Right Side */}
               <button
                 className="bg-gray-800 hover:bg-gray-700 text-white w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex justify-center items-center rounded-full transition-all"
                 onClick={nextSlide}
