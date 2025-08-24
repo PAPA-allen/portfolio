@@ -21,51 +21,51 @@ interface Project {
 const projects: Project[] = [
   {
     num: "01",
-    category: "Frontend",
+    category: "SpareParts Hub",
     description: "Developed comprehensive layouts, interactive dashboards, and integrated RESTful endpoints to facilitate robust backend functionality for SpareParts Hub. Implemented responsive UI components and seamless API integrations to enhance user experience and streamline automotive parts management operations.",
     stack: [{ name: "TypeScript" }, { name: "React" },],
-    image: "/project1.png",
+    image: "/p1.png",
     live: "https://www.sparepartshub.store",
     github: "",
   },
   {
     num: "02",
-    category: "React Native",
+    category: "SpareParts Hub Mobile App",
     description: "Engineered a cross-platform mobile application using React Native to enable iOS and Android users to browse, search, and purchase automotive spare parts online. Implemented responsive design patterns, secure payment gateways, and intuitive navigation to deliver a seamless e-commerce experience across multiple mobile platforms.",
     stack: [{ name: "TypeScript" }, { name: "React Native" }],
-    image: "/project2.png",
+    image: "/p2.png",
     live: "https://apps.apple.com/gb/app/sparepartshub/id6747882519",
     github: "",
   },
   {
     num: "03",
-    category: "FullStack",
+    category: "MeetStream Video Communication Platform",
     description: "A video communication platform built to facilitate seamless client interactions. The app allows users to engage in video calls in real-time, making it easy to collaborate remotely. Built with TypeScript, Node.js, and the MeetStream API for video streaming functionality.",
     stack: [{ name: "TypeScript" }, { name: "Node.js" }, { name: "MeetStream" }],
-    image: "/project3.png",
+    image: "/p3.png",
     live: "https://meetstream-three.vercel.app/",
     github: "https://github.com/PAPA-allen/meetstream",
   },
   {
     num: "04",
-    category: "Frontend",
+    category: "LMS Mobile App",
     description: "A mobile application designed for parents to manage and track their wards' performance. Built with React Native for the mobile app and styled with TailwindCSS, the app provides a seamless experience for monitoring academic progress, assignments, and notifications.",
     stack: [{ name: "React Native" }],
-    image: "/project4.png",
+    image: "/p4.png",
 
   },
   {
     num: "05",
-    category: "Frontend",
+    category: "LMS Web Application",
     description: "A web application built to assist students in making learning easier. The app provides a variety of features such as resource management, progress tracking, and interactive study tools. Built with React.js for the frontend, Redux for state management, and styled with TailwindCSS, the app ensures a smooth and engaging user experience.",
     stack: [{ name: "React.js" }, { name: "Redux" }, { name: "TailwindCSS" }, { name: "React Query" }],
-    image: "/project5.png",
+    image: "/p5.png",
     live: "",
     github: "",
   },
   {
     num: "06",
-    category: "Mobile",
+    category: "Laundry Mobile App",
     description: "A mobile application developed for a client to manage their small laundry shop. The app allows shop owners to efficiently manage customer orders, track laundry progress, and handle payments. Built with React Native for cross-platform support and TailwindCSS for responsive design, it offers a simple yet effective solution for streamlining laundry operations and improving customer satisfaction.",
     stack: [
       { name: "React Native" },
@@ -73,13 +73,13 @@ const projects: Project[] = [
       { name: "Firebase" },      // Added Firebase for authentication and data storage
       { name: "React Navigation" } // Used for app navigation
     ],
-    image: "/project6.png",
+    image: "/p6.png",
     live: "",
     github: "",
   },
   {
     num: "07",
-    category: "FullStack",
+    category: "StudyHub LMS Web Application",
     description: "StudyHub is an interactive study platform designed for students to access educational videos and learning resources. The platform allows students to watch videos, track their progress, and interact with instructors in real time. StudyHub offers a fast, responsive, and engaging experience.",
     stack: [
       { name: "Next.js" },
@@ -89,13 +89,13 @@ const projects: Project[] = [
       { name: "Redis" },
 
     ],
-    image: "/project7.png",
+    image: "/p7.png",
     live: "",
     github: "",
   },
   {
     num: "08",
-    category: "Frontend",
+    category: "LMS Admin Dashboard",
     description: "The Admin Dashboard for StudyHub provides a powerful interface to manage and customize every aspect of the platform. From the layout to the footer, the admin can easily modify content, update user data, and oversee platform performance. Designed with a focus on usability and clean design. It integrates a smooth user experience with interactive features such as drag-and-drop components, charts, and real-time updates, allowing admins to manage the platform efficiently.",
     stack: [
       { name: "Next.js" },
@@ -104,13 +104,13 @@ const projects: Project[] = [
       { name: "React DnD" },     // Added for drag-and-drop functionality
       { name: "Socket.IO" }      // For real-time updates on the platform's status
     ],
-    image: "/project8.png",
+    image: "/p8.png",
     live: "",
     github: "",
   },
   {
     num: "09",
-    category: "FullStack",
+    category: "Bus Transit Dashboard",
     description: "The Bus Transit Dashboard is a comprehensive management system for overseeing bus routes, scheduling, and user activity in a company’s transit system to ensure a clean and responsive interface. Real-time updates and notifications are handled with **Socket.IO**, while detailed transit data and reports are visualized using **Chart.js**.",
     stack: [
       { name: "PHP" },             // PHP for backend logic and API handling
@@ -122,19 +122,19 @@ const projects: Project[] = [
       { name: "Axios" },
 
     ],
-    image: "/project9.png",
+    image: "/p9.png",
     live: "",
     github: "",
   },
   {
     num: "10",
-    category: "FullStack",
+    category: "Student Exam Portal",
     description: "This application is designed for students to solve past questions and track their academic progress. The app allows users to access a vast database of past exam questions, submit answers, and review solutions. It provides an interactive interface that helps students improve their study habits. Features include question categorization, progress tracking, and performance analysis",
     stack: [
       { name: "Javascript" },
       { name: "Python" },
     ],
-    image: "/project10.png",
+    image: "/p10.png",
     live: "",
     github: "",
   }
@@ -173,7 +173,7 @@ const Work = () => {
               <div className="text-5xl font-extrabold">{project.num}</div>
 
               {/* Project Title */}
-              <h2 className="text-3xl font-semibold capitalize">{project.category} Project</h2>
+              <h2 className="text-3xl font-semibold capitalize">{project.category}</h2>
 
               {/* Project Description */}
               <p className="text-lg">{project.description}</p>
