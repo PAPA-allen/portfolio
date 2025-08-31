@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Define project structure interface
 interface Project {
@@ -205,7 +206,7 @@ const Work = () => {
           className="bg-gray-800 hover:bg-gray-700 text-white w-16 h-16 flex justify-center items-center rounded-full transition-all shadow-lg hover:shadow-xl"
           onClick={prevSlide}
         >
-          <span className="text-2xl">&lt;</span>
+          <span className="text-2xl"><ChevronLeft /></span>
         </button>
       </div>
 
@@ -214,7 +215,7 @@ const Work = () => {
           className="bg-gray-800 hover:bg-gray-700 text-white w-16 h-16 flex justify-center items-center rounded-full transition-all shadow-lg hover:shadow-xl"
           onClick={nextSlide}
         >
-          <span className="text-2xl">&gt;</span>
+          <span className="text-2xl"><ChevronRight /></span>
         </button>
       </div>
 
@@ -291,7 +292,7 @@ const Work = () => {
                 className="bg-gray-800 hover:bg-gray-700 text-white w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex justify-center items-center rounded-full transition-all"
                 onClick={prevSlide}
               >
-                <span className="text-xl sm:text-2xl">&lt;</span>
+                <span className="text-xl sm:text-2xl"><ChevronLeft /></span>
               </button>
 
               {/* Next Button - Right Side */}
@@ -299,7 +300,7 @@ const Work = () => {
                 className="bg-gray-800 hover:bg-gray-700 text-white w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex justify-center items-center rounded-full transition-all"
                 onClick={nextSlide}
               >
-                <span className="text-xl sm:text-2xl">&gt;</span>
+                <span className="text-xl sm:text-2xl"><ChevronRight /></span>
               </button>
             </div>
           </div>
