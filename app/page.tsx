@@ -4,7 +4,7 @@ import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 export default function Home() {
   const handleDownloadCV = () => {
@@ -15,7 +15,7 @@ export default function Home() {
     link.click();
     document.body.removeChild(link);
   };
-  
+
 
   return (
     <motion.section
@@ -29,31 +29,100 @@ export default function Home() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>Software Engineer</span>
+            {/* Animated subtitle with word-by-word typewriter */}
+            <span>
+              {["Software", "Engineer"].map((word, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    delay: 0.2 + (index * 0.15),
+                    ease: "easeOut"
+                  }}
+                >
+                  {word}{index < 1 ? " " : ""}
+                </motion.span>
+              ))}
+            </span>
+
+            {/* Animated heading with word-by-word typewriter effect */}
             <h1 className="h1">
-              Hi! I'm<br/><span className="text-blue-500">Allen Aryee</span>
+              {["Hi!", "I'm"].map((word, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    delay: 0.5 + (index * 0.15),
+                    ease: "easeOut"
+                  }}
+                >
+                  {word}{index < 1 ? " " : ""}
+                </motion.span>
+              ))}
+              <br />
+              {["Allen", "Aryee"].map((word, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    delay: 0.8 + (index * 0.15),
+                    ease: "easeOut"
+                  }}
+                  className="text-blue-500"
+                >
+                  {word}{index < 1 ? " " : ""}
+                </motion.span>
+              ))}
             </h1>
-            <p className="max-w-[500px] mb-9 ">
-              A full-stack developer passionate about creating mobile and web applications with expertise in modern technologies.
+
+            {/* Animated description with word-by-word typewriter effect */}
+            <p className="max-w-[500px] mb-9">
+              {["A", "full-stack", "developer", "passionate", "about", "creating", "mobile", "and", "web", "applications", "with", "expertise", "in", "modern", "technologies."].map((word, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    delay: 2.0 + (index * 0.15),
+                    ease: "easeOut"
+                  }}
+                >
+                  {word}{index < 14 ? " " : ""}
+                </motion.span>
+              ))}
             </p>
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+
+            {/* Animated buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 4.5 }}
+              className="flex flex-col xl:flex-row items-center gap-8"
+            >
               <Button variant="secondary" onClick={handleDownloadCV}>
                 <span>
                   Download CV
                 </span>
-                <FiDownload className="text-xl"/>
+                <FiDownload className="text-xl" />
               </Button>
               <div className="mb-6 xl:mb-0">
-                <Socials/> 
+                <Socials />
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo/>
+            <Photo />
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </motion.section>
   );
 }

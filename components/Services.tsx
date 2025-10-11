@@ -36,6 +36,11 @@ const services = [
     description: "I optimize websites and apps to ensure fast load times, high performance, and great user experiences, using techniques like code splitting and lazy loading.",
     icon: "⚡",
   },
+  {
+    title: "AI Solutions",
+    description: "I integrate cutting-edge AI solutions into your applications, including machine learning models, natural language processing, and intelligent automation to enhance user experiences and business operations.",
+    icon: "🤖",
+  },
 ];
 
 const Services = () => {
@@ -74,7 +79,7 @@ const Services = () => {
               >
                 <CardItem
                   translateZ="50"
-                  className="flex justify-center items-center text-5xl mb-6" 
+                  className="flex justify-center items-center text-5xl mb-6"
                 >
                   {service.icon}
                 </CardItem>
