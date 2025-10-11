@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp, SiNx, SiReactquery } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiMongodb, SiGraphql, SiReactrouter, SiSass, SiDocker, SiGit, SiPostgresql, SiStyledcomponents, SiJest, SiFirebase, SiExpo, SiRedux, SiGithub, SiVercel, SiFigma, SiPostman, SiRedis, SiWordpress, SiPhp, SiNx, SiReactquery, SiTensorflow } from "react-icons/si";
 import { motion } from "framer-motion";
 
 // About section data
@@ -34,7 +34,7 @@ const education = [
 ];
 
 // Skills section data with added frontend and backend skills
-const skills = [
+export const skills = [
   // Frontend Web Development
   { icon: <FaHtml5 size={48} color="#E34F26" />, label: "HTML5", type: "frontend" },
   { icon: <FaCss3 size={48} color="#1572B6" />, label: "CSS3", type: "frontend" },
@@ -62,6 +62,10 @@ const skills = [
   { icon: <SiRedis size={48} color="#D92D2E" />, label: "Redis", type: "backend" },
   { icon: <SiWordpress size={48} color="#21759B" />, label: "WordPress", type: "backend" },
   { icon: <SiPhp size={48} color="#777BB3" />, label: "PHP", type: "backend" },
+  { icon: <FaPython size={48} color="#3776AB" />, label: "Python", type: "backend" },
+
+  // AI & Machine Learning
+  { icon: <SiTensorflow size={48} color="#FF6F00" />, label: "TensorFlow", type: "ai" },
 
   // Frontend Mobile Development (React Native)
   { icon: <FaReact size={48} color="#61DAFB" />, label: "React Native", type: "frontend" },
@@ -189,7 +193,12 @@ const Resume = () => {
               {skills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  className={`flex flex-col items-center justify-center text-center ${skill.type === "frontend" ? "text-blue-600" : "text-green-600"}`}
+                  className={`flex flex-col items-center justify-center text-center ${skill.type === "frontend"
+                    ? "text-blue-600"
+                    : skill.type === "ai"
+                      ? "text-purple-600"
+                      : "text-green-600"
+                    }`}
                   initial={{ opacity: 0 }}
                   animate={{
                     opacity: 1,
