@@ -30,7 +30,6 @@ const info = [
 ];
 
 const Contact = () => {
-    const formRef = useRef({});
     const [form, setForm] = useState({
         fullName: "",
         phoneNumber: "",
@@ -70,7 +69,7 @@ const Contact = () => {
                     message: "",
                     selectService: ""
                 });
-            }, (error: any) => {
+            }, () => {
                 setLoading(false);
                 setFormStatus("error"); // Set error status if something goes wrong
             });
@@ -86,7 +85,7 @@ const Contact = () => {
         } else if (formStatus === "error") {
             toast.error("Failed to send the message, please try again.");
         }
-    }, [formStatus]); // Trigger the toast when formStatus changes
+    }, [formStatus, form.fullName]); // Trigger the toast when formStatus changes
 
     return (
         <motion.section

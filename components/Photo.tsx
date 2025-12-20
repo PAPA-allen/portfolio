@@ -32,8 +32,8 @@ const Photo = () => {
             src="/assets/hero.png"
             priority
             quality={100}
-            layout="fill"
-            objectFit="cover" 
+            fill
+            style={{ objectFit: "cover" }}
             alt="Hero image"
             className="absolute top-0 left-0"
           />

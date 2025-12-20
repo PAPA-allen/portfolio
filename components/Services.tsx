@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CardContainer, CardBody, CardItem } from "./3d-card"; // Import your 3D card components
-import Link from 'next/link';
+import { CardContainer, CardItem } from "./3d-card"; // Import your 3D card components
 
 const services = [
   {
