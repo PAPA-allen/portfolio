@@ -15,7 +15,7 @@ const about = {
     { fieldName: "Experience", fieldValue: "5+ years" },
     { fieldName: "Nationality", fieldValue: "Ghanaian" },
     { fieldName: "Email", fieldValue: "allenniia@gmail.com" },
-    { fieldName: "Freelance", fieldValue: "Available" },
+    { fieldName: "Status", fieldValue: "Available" },
   ],
 };
 
@@ -162,7 +162,7 @@ const Resume = () => {
                 >
                   <h3 className="font-medium ">{item.fieldName}</h3>
                   <p className=" mt-2 flex items-center">
-                    {item.fieldName === "Freelance" && item.fieldValue === "Available" ? (
+                    {item.fieldName === "Status" && item.fieldValue === "Available" ? (
                       <>
                         <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-blink mr-2"></span>
                         {item.fieldValue}
