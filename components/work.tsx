@@ -22,6 +22,15 @@ interface Project {
 const projects: Project[] = [
   {
     num: "01",
+    category: "Romofete",
+    description: "A modern e-commerce web application designed to help users discover and purchase thoughtful gifts for their loved ones. Built with a focus on user experience and seamless authentication, Romofete provides an intuitive platform where customers can browse curated collections of beautiful items to bring joy and smiles to special people in their lives.",
+    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "React" }, { name: "shadcn/ui" }, { name: "paystack" }],
+    image: "/p11.png",
+    live: "https://romofete.com",
+    github: "",
+  },
+  {
+    num: "02",
     category: "SpareParts Hub",
     description: "Developed comprehensive layouts, interactive dashboards, and integrated RESTful endpoints to facilitate robust backend functionality for SpareParts Hub. Implemented responsive UI components and seamless API integrations to enhance user experience and streamline automotive parts management operations.",
     stack: [{ name: "TypeScript" }, { name: "React" },],
@@ -30,7 +39,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "02",
+    num: "03",
     category: "SpareParts Hub Mobile App",
     description: "Engineered a cross-platform mobile application using React Native to enable iOS and Android users to browse, search, and purchase automotive spare parts online. Implemented responsive design patterns, secure payment gateways, and intuitive navigation to deliver a seamless e-commerce experience across multiple mobile platforms.",
     stack: [{ name: "TypeScript" }, { name: "React Native" }],
@@ -39,7 +48,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "03",
+    num: "04",
     category: "MeetStream Video Communication Platform",
     description: "A video communication platform built to facilitate seamless client interactions. The app allows users to engage in video calls in real-time, making it easy to collaborate remotely. Built with TypeScript, Node.js, and the MeetStream API for video streaming functionality.",
     stack: [{ name: "TypeScript" }, { name: "Node.js" }, { name: "MeetStream" }],
@@ -48,7 +57,7 @@ const projects: Project[] = [
     github: "https://github.com/PAPA-allen/meetstream",
   },
   {
-    num: "04",
+    num: "05",
     category: "LMS Mobile App",
     description: "A mobile application designed for parents to manage and track their wards' performance. Built with React Native for the mobile app and styled with TailwindCSS, the app provides a seamless experience for monitoring academic progress, assignments, and notifications.",
     stack: [{ name: "React Native" }],
@@ -56,7 +65,7 @@ const projects: Project[] = [
 
   },
   {
-    num: "05",
+    num: "06",
     category: "LMS Web Application",
     description: "A web application built to assist students in making learning easier. The app provides a variety of features such as resource management, progress tracking, and interactive study tools. Built with React.js for the frontend, Redux for state management, and styled with TailwindCSS, the app ensures a smooth and engaging user experience.",
     stack: [{ name: "React.js" }, { name: "Redux" }, { name: "TailwindCSS" }, { name: "React Query" }],
@@ -65,7 +74,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "06",
+    num: "07",
     category: "Laundry Mobile App",
     description: "A mobile application developed for a client to manage their small laundry shop. The app allows shop owners to efficiently manage customer orders, track laundry progress, and handle payments. Built with React Native for cross-platform support and TailwindCSS for responsive design, it offers a simple yet effective solution for streamlining laundry operations and improving customer satisfaction.",
     stack: [
@@ -79,7 +88,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "07",
+    num: "08",
     category: "StudyHub LMS Web Application",
     description: "StudyHub is an interactive study platform designed for students to access educational videos and learning resources. The platform allows students to watch videos, track their progress, and interact with instructors in real time. StudyHub offers a fast, responsive, and engaging experience.",
     stack: [
@@ -95,7 +104,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "08",
+    num: "09",
     category: "LMS Admin Dashboard",
     description: "The Admin Dashboard for StudyHub provides a powerful interface to manage and customize every aspect of the platform. From the layout to the footer, the admin can easily modify content, update user data, and oversee platform performance. Designed with a focus on usability and clean design. It integrates a smooth user experience with interactive features such as drag-and-drop components, charts, and real-time updates, allowing admins to manage the platform efficiently.",
     stack: [
@@ -110,7 +119,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "09",
+    num: "10",
     category: "Bus Transit Dashboard",
     description: "The Bus Transit Dashboard is a comprehensive management system for overseeing bus routes, scheduling, and user activity in a company’s transit system to ensure a clean and responsive interface. Real-time updates and notifications are handled with **Socket.IO**, while detailed transit data and reports are visualized using **Chart.js**.",
     stack: [
@@ -128,7 +137,7 @@ const projects: Project[] = [
     github: "",
   },
   {
-    num: "10",
+    num: "11",
     category: "Student Exam Portal",
     description: "This application is designed for students to solve past questions and track their academic progress. The app allows users to access a vast database of past exam questions, submit answers, and review solutions. It provides an interactive interface that helps students improve their study habits. Features include question categorization, progress tracking, and performance analysis",
     stack: [
