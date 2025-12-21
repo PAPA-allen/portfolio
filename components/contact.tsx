@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, useState, useEffect } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -8,12 +9,12 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 import { toast } from 'sonner';
-import Loader from './loader';  // Importing the loader component
+import Loader from './loader';
 import { Loader2Icon } from 'lucide-react';
 
 const info = [
     {
-        icon: <FaPhoneAlt/>,
+        icon: <FaPhoneAlt />,
         title: 'Phone',
         description: '(+000) 000 000 000',
     },
@@ -38,7 +39,7 @@ const Contact = () => {
         selectService: ""
     });
     const [loading, setLoading] = useState(false);
-    const [formStatus, setFormStatus] = useState<string | null>(null); // Track success or error status
+    const [formStatus, setFormStatus] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -48,7 +49,7 @@ const Contact = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        setFormStatus(null); // Reset status before sending
+        setFormStatus(null);
 
         emailjs.send('service_vk03kie', 'template_7u81n9t', {
             from_name: form.fullName,
@@ -61,7 +62,7 @@ const Contact = () => {
         }, 'TWc6M5bt3b7fBo0WR')
             .then(() => {
                 setLoading(false);
-                setFormStatus("success"); // Set success status after successful send
+                setFormStatus("success");
                 setForm({
                     fullName: "",
                     phoneNumber: "",
@@ -71,21 +72,19 @@ const Contact = () => {
                 });
             }, () => {
                 setLoading(false);
-                setFormStatus("error"); // Set error status if something goes wrong
+                setFormStatus("error");
             });
     };
 
-    // Disable button if required fields are empty
     const isFormValid = form.fullName && form.phoneNumber && form.email && form.message && form.selectService;
 
-    // useEffect for toast notifications based on form submission status
     useEffect(() => {
         if (formStatus === "success") {
             toast.success(`Thank you ${form.fullName}, I will get back to you as soon as possible`);
         } else if (formStatus === "error") {
             toast.error("Failed to send the message, please try again.");
         }
-    }, [formStatus, form.fullName]); // Trigger the toast when formStatus changes
+    }, [formStatus, form.fullName]);
 
     return (
         <motion.section
@@ -144,7 +143,6 @@ const Contact = () => {
                                     className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                                 />
                             </div>
-
                             <div className="mb-4">
                                 <label htmlFor="message" className="block ">Your Message</label>
                                 <Textarea
@@ -163,12 +161,11 @@ const Contact = () => {
                                     className=" px-6 py-2 rounded-lg shadow-md hover:bg-primary-dark"
                                     disabled={loading || !isFormValid}
                                 >
-                                    {loading ? <Loader2Icon className="animate-spin"/> : "Send Message"}
+                                    {loading ? <Loader2Icon className="animate-spin" /> : "Send Message"}
                                 </Button>
                             </div>
                         </form>
                     </div>
-
                     <div className=" p-8 shadow-lg rounded-lg">
                         <h2 className="text-2xl font-semibold  mb-6">Select Service</h2>
                         <Select
