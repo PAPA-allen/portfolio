@@ -64,7 +64,7 @@ export default function Home() {
                 </motion.span>
               ))}
               <br />
-              {["Allen", "Nii", " Aryee"].map((word, index) => (
+              {["Allen", "Nii A.", " Aryee"].map((word, index) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0 }}
