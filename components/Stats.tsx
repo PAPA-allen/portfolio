@@ -5,7 +5,7 @@ import CountUp from "react-countup";
 import { skills } from "./resume";
 
 const currentYear = new Date().getFullYear();
-const startYear = 2020;
+const startYear = 2021;
 const yearsOfExperience = currentYear - startYear;
 
 // Stats data
