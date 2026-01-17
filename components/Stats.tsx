@@ -19,7 +19,7 @@ const stats = [
     text: "Technologies Expertise"
   },
   {
-    num: 15,
+    num: 13,
     text: "Projects Completed"
   },
 ];
