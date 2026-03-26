@@ -11,7 +11,7 @@ const about = {
     "I'm a passionate full-stack developer with 5+ years of experience building innovative and scalable web & mobile applications. I am proficient in both frontend and backend technologies and am always eager to learn more.",
   info: [
     { fieldName: "Name", fieldValue: "Allen Aryee" },
-    { fieldName: "Phone", fieldValue: "(+233) 247 549 825" },
+    { fieldName: "Phone", fieldValue: "(+44) 7562 864 165" },
     { fieldName: "Experience", fieldValue: "5+ years" },
     { fieldName: "Nationality", fieldValue: "Ghanaian" },
     { fieldName: "Email", fieldValue: "allenniia@gmail.com" },
